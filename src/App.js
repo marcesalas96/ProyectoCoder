@@ -5,9 +5,10 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <h5>Marcelo Salas</h5>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Proabando React
         </p>
         <a
           className="App-link"
