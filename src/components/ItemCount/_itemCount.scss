@@ -1,0 +1,28 @@
+.itemCard__div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F0F0F0;
+    width: 50%;
+    margin-bottom: 10px;
+    max-height: 40px;
+    &__texto{
+        display: flex;
+        align-items: center;
+        font-size: 15px;
+        margin-top: 15px;
+    }
+    &__botones{
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        color: #9C13FF;
+        text-align: center;
+        position: relative;
+        border: 1px solid #F0F0F0;
+        font-size: 20px;
+    }
+};

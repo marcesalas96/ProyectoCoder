@@ -1,8 +1,8 @@
 import Card from 'react-bootstrap/Card';
-import './_ItemListCards.scss'
+import './_ItemListCards.scss';
+import { ItemCount } from '../ItemCount/ItemCount';
 
-export const ItemListCards = ({ imagen, titulo, descripcion, precio }) => {
-
+export const ItemListCards = ({ imagen, titulo, descripcion, precio}) => {
     return (
         <Card className='itemCard'>
             <Card.Img variant="top" src={imagen} />
@@ -12,7 +12,8 @@ export const ItemListCards = ({ imagen, titulo, descripcion, precio }) => {
                     <p>{descripcion}</p>
                     <h4>{precio}</h4>
                 </Card.Text>
-                <button className='itemCard__btn'>Agregar al carrito</button>
+                <ItemCount stock={5} cantidadInicial={0}/>
+                <button className='itemCard__btn'>Agregar al Carrito</button>
             </Card.Body>
         </Card>
     )
