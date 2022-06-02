@@ -27,9 +27,9 @@ export const ItemCount = (props) => {
 
     return(
         <div className='itemCard__div'>
-            <button className='itemCard__div__botones' onClick={addCant}> + </button>
-            <p className='itemCard__div__texto'>{cantidad}</p>
             <button className='itemCard__div__botones' onClick={removeCant}>-</button>
+            <p className='itemCard__div__texto'>{cantidad}</p>
+            <button className='itemCard__div__botones' onClick={addCant}>+</button>
         </div>
     )
 }
