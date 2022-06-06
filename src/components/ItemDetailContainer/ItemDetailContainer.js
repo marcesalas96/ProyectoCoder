@@ -7,15 +7,13 @@ import { useParams } from 'react-router-dom';
 
 export const ItemDetailContainer = () => {
     const[loading, setLoading] = useState(true);
-    const[item, setItem] = useState(null)
-    const itemId = useParams()
-    console.log(itemId)
-    
+    const[item, setItem] = useState([])
+    const {itemId} = useParams()
+    console.log(item)
     useEffect(() =>{
         setLoading(true)
-        pedirDatosId(3)
+        pedirDatosId(itemId)
         .then((resp)=>{
-            console.log(resp)
             setItem(resp)
         })
         .catch((e)=>{
@@ -24,15 +22,15 @@ export const ItemDetailContainer = () => {
         .finally(()=>{
             setLoading(false)
         })
-    },[])
+    },[itemId])
     return(
         loading
         ?<Loader/>
         :
         <div className='itemDetailContainer'>  
-        {
-            item.map((item) => <ItemDetail key={item.id} item={item}/>)
-        }
+        
+            <ItemDetail  item={item}/>
+        
         </div>
         
         
