@@ -6,11 +6,11 @@ export const CartWidget = () =>{
         <div className="container__logoCarrito">
             <div className='div__container__logoCarrito'>
                 <div className='div__logoIngresar'>
-                    <MdOutlinePeopleAlt/>
+                    <MdOutlinePeopleAlt className='div__logoIngresar__logo'/>
                     <h5>Registrarse / Inicio de sesión</h5>
                 </div>
                 <div className='div__logoCarrito'>
-                    <HiOutlineShoppingCart/>
+                    <HiOutlineShoppingCart className='div__logoCarrito__logo'/>
                 </div>
             </div>
         </div>

@@ -1,20 +1,15 @@
 import './_loader.scss'
-import perroLoader from './imagenesLoader/perroLoader.png'
-import gatoLoader from './imagenesLoader/gatoLoader.png'
-import pezLoader from './imagenesLoader/pezLoader.png'
-import pajaroLoader from './imagenesLoader/pajaroLoader.png'
-import reptilLoader from './imagenesLoader/reptilLoader.png'
 
 
 export const Loader = () => {
 
     return(
         <div className='loader'>
-            <img className='loader__img1' alt="" src={perroLoader}/>
-            <img className='loader__img2' alt="" src={gatoLoader}/>
-            <img className='loader__img3' alt="" src={pezLoader}/>
-            <img className='loader__img4' alt="" src={pajaroLoader}/>
-            <img className='loader__img5' alt="" src={reptilLoader}/>
+            <img className='loader__img1' alt="" src="../imagenesLoader/perroLoader.png"/>
+            <img className='loader__img2' alt="" src="../imagenesLoader/gatoLoader.png"/>
+            <img className='loader__img3' alt="" src="../imagenesLoader/pajaroLoader.png"/>
+            <img className='loader__img4' alt="" src="../imagenesLoader/pezLoader.png"/>
+            <img className='loader__img5' alt="" src="../imagenesLoader/reptilLoader.png"/>
         </div>
     )
 

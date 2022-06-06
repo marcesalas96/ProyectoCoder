@@ -1,7 +1,6 @@
 import './_item.scss'
-import {ItemCount} from '../ItemCount/ItemCount'
 import Card from 'react-bootstrap/Card';
-
+import { Link } from 'react-router-dom';
 export const Item = ({item}) => {
     
     return(
@@ -13,8 +12,7 @@ export const Item = ({item}) => {
                 <p>{item.descripcion}</p>
                 <h4>${item.precio}</h4>
             </Card.Text>
-            <ItemCount stock={5} cantidadInicial={0}/>
-            <button className='itemCard__btn'>Agregar al Carrito</button>
+            <Link to={`/productos/${item.id}`}> <button className='itemCard__btn'>Ver más!</button></Link>
         </Card.Body>
     </Card>
     )

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./_header.scss"
 export const Header = ({children}) => {
     // const children = this.props
@@ -11,10 +12,10 @@ export const Header = ({children}) => {
                 </div>
                 <nav className="header__div__navbar">
                     <ul className="header__div__navbar__list">
-                        <li className="header__div__navbar__list__item">Inicio</li>
-                        <li className="header__div__navbar__list__item">Productos</li>
-                        <li className="header__div__navbar__list__item">Quienes Somos</li>
-                        <li className="header__div__navbar__list__item">Nuestros clientes </li>
+                        <li className="header__div__navbar__list__item"> <Link to={'/'}> Inicio</Link></li>
+                        <li className="header__div__navbar__list__item"> <Link to={'/categoria/gato'}> Gatos </Link></li>
+                        <li className="header__div__navbar__list__item"> <Link to={'/categoria/perro'}> Perros </Link></li>
+                        <li className="header__div__navbar__list__item"> <Link to={'/'}> Nuestros clientes </Link></li>
                     </ul>
                 </nav>
             </div>
