@@ -2,4 +2,18 @@
     background-color: rgb(245, 245, 245);
     padding-top: 2rem;
     height: 100vh;
+    &__divReturn{
+        position: relative;
+        left: 20%;
+        display: flex;
+        align-items: center;
+        &__logo{
+            font-size: 30px;
+            cursor: pointer;
+        }
+        &__span{
+            color: #9C13FF;
+            cursor: pointer;
+        }
+    }
 }
