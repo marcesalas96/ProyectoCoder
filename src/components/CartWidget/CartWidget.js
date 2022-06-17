@@ -1,5 +1,6 @@
 import {HiOutlineShoppingCart} from 'react-icons/hi'
 import {MdOutlinePeopleAlt} from 'react-icons/md'
+import { Link } from 'react-router-dom'
 import "./_CartWidget.scss"
 export const CartWidget = () =>{
     return(
@@ -10,7 +11,9 @@ export const CartWidget = () =>{
                     <h5>Registrarse / Inicio de sesión</h5>
                 </div>
                 <div className='div__logoCarrito'>
-                    <HiOutlineShoppingCart className='div__logoCarrito__logo'/>
+                    <Link to='/cart'>
+                        <HiOutlineShoppingCart className='div__logoCarrito__logo'/>
+                    </Link>
                 </div>
             </div>
         </div>

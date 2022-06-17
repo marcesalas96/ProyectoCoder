@@ -1,4 +1,3 @@
-// import { useState } from 'react';
 import './_itemCount.scss'
 
 export const ItemCount = ({stock, setCantidad, cantidad,onAdd}) => {
