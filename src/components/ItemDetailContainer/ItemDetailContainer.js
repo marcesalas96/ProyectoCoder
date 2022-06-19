@@ -3,8 +3,8 @@ import {pedirDatosId} from '../../mock/pedirDatosId';
 import { useEffect, useState } from 'react'
 import { Loader } from '../Loader/Loader'
 import { ItemDetail } from '../ItemDetail/ItemDetail';
-import { useNavigate, useParams } from 'react-router-dom';
-import {MdOutlineArrowBackIos } from 'react-icons/md'
+import { useParams } from 'react-router-dom';
+import { ReturnPage } from '../ReturnPage/ReturnPage';
 
 export const ItemDetailContainer = () => {
     const[loading, setLoading] = useState(true);
@@ -23,20 +23,12 @@ export const ItemDetailContainer = () => {
             setLoading(false)
         })
     },[itemId])
-    const navigate = useNavigate()
-    const returnPage = () => {
-        navigate(-1)
-    }
     return(
         loading
         ?<Loader/>
         :
         <div className='itemDetailContainer'>  
-            <div className='itemDetailContainer__divReturn'>
-            
-            <MdOutlineArrowBackIos className='itemDetailContainer__divReturn__logo' onClick={returnPage}/>
-            <span className='itemDetailContainer__divReturn__span' onClick={returnPage}>Volver</span>
-            </div>
+            <ReturnPage/>
             <ItemDetail  item={item}/>
         
         </div>

@@ -12,10 +12,10 @@ export const Header = ({children}) => {
                 </div>
                 <nav className="header__div__navbar">
                     <ul className="header__div__navbar__list">
-                        <li className="header__div__navbar__list__item"> <Link to={'/'}> Inicio</Link></li>
-                        <li className="header__div__navbar__list__item"> <Link to={'/categoria/gato'}> Gatos </Link></li>
-                        <li className="header__div__navbar__list__item"> <Link to={'/categoria/perro'}> Perros </Link></li>
-                        <li className="header__div__navbar__list__item"> <Link to={'/'}> Nuestros clientes </Link></li>
+                        <li className="header__div__navbar__list__item"> <Link className="header__link" to={'/'}> Inicio</Link></li>
+                        <li className="header__div__navbar__list__item"> <Link className="header__link" to={'/categoria/gato'}> Gatos </Link></li>
+                        <li className="header__div__navbar__list__item"> <Link className="header__link" to={'/categoria/perro'}> Perros </Link></li>
+                        <li className="header__div__navbar__list__item"> <Link className="header__link" to={'/'}> Nuestros clientes </Link></li>
                     </ul>
                 </nav>
             </div>

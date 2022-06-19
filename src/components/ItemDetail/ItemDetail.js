@@ -5,16 +5,14 @@ import './_itemDetail.scss'
 import { Link } from "react-router-dom";
 import { CartContext } from "../../context/CartContext";
 export const ItemDetail = ({ item }) => {
-    const {addItem} = useContext(CartContext)
+    const { addItem, isInCart } = useContext(CartContext)
     const [counter, setCounter] = useState(1)
-    const [add, setAdd] = useState(false)
 
     const handleAddToCart = () => {
         const itemToCart = {
             ...item,
             cantidad: counter
         }
-        setAdd(true)
         addItem(itemToCart)
     }
 
@@ -32,7 +30,8 @@ export const ItemDetail = ({ item }) => {
                 <h3>Precio: ${item.precio}</h3>
                 <p>Stock: {item.stock}</p>
                 {
-                    !add ?
+                    !isInCart(item.id)
+                        ?
                         <ItemCount
                             stock={item.stock}
                             cantidad={counter}
