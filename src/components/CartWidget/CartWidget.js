@@ -14,7 +14,7 @@ export const CartWidget = () =>{
                     <MdOutlinePeopleAlt className='div__logoIngresar__logo'/>
                     <h5>Registrarse / Inicio de sesión</h5>
                 </div>
-                <div className='div__logoCarrito'>
+                <div className={`div__logoCarrito${totalQuantity()===0 ? "--empty" : ""}`}>
                     <Link to='/cart' className='div__logoCarrito__link'>
                         <HiOutlineShoppingCart className='div__logoCarrito__logo'/>
                         <span className='div__logoCarrito__span'>{totalQuantity()}</span>

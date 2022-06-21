@@ -5,7 +5,7 @@ export const productos = [
         precio: 3500,
         imagen: "../imagenes/alimentoBF.jpg",
         descripcion: "Alimento especialmente desarrollada para la raza BullDog francés",
-        stock: 7,
+        stock: 0,
         categoria: "perro"
     },
     {

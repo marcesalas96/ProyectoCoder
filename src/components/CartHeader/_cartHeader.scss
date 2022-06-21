@@ -1,0 +1,27 @@
+.cart {
+    &__div{
+        border-bottom: 1px rgb(202, 202, 202) solid;
+    }
+    &__list {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        padding: 1rem;
+        width: 100%;
+        background-color: #9d13ff2f;
+
+        &__producto {
+            width: 60%;
+        }
+
+        &__precio {
+            width: 15%;
+            text-align: center;
+        }
+
+        &__cantidad {
+            width: 25%;
+            text-align: center;
+        }
+    }
+}

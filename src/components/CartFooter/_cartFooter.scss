@@ -1,0 +1,46 @@
+.cart__div {
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 1rem;
+
+        &__texto {
+            margin-top: 5px;
+        }
+
+        &__botones {
+            display: flex;
+            gap: 1rem;
+        }
+
+        &__btn {
+            border: none;
+            margin-top: 5px;
+            padding: 7px;
+            border-radius: 5px;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+            background-color: #9d13ff2f;
+            font-size: 16px;
+            font-weight: 500;
+
+            &:hover {
+                transform: scale(1.1, 1.1);
+                border: 0.5px rgb(202, 202, 202) solid;
+            }
+
+            &__logo {
+                font-size: 22px
+            }
+
+            &-vaciar {
+                @extend .cart__div__footer__btn;
+                background-color: rgba(255, 0, 0, 0.596);
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+            }
+        }
+    }
+}

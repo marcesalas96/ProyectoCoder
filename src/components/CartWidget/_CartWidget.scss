@@ -14,6 +14,10 @@
     &__logoCarrito{
         width: 70px;
         height: 70px;
+        &--empty{
+            @extend .div__logoCarrito;
+            display: none;
+        }
         &__link{
             color: #212529;
             text-decoration: none;

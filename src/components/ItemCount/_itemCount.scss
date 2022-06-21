@@ -6,7 +6,7 @@
     margin-bottom: 10px;
     max-height: 40px;
     background-color: #9d13ff2f;
-    box-shadow:0 1px 2px 0 rgba(0, 0, 0,  0.3);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
 
 
     &__texto {
@@ -17,7 +17,7 @@
     }
 
     &__botones {
-        background:none;
+        background: none;
         width: 30px;
         height: 30px;
         display: flex;
@@ -29,22 +29,31 @@
         position: relative;
         border: none;
         font-size: 20px;
+        &--max{
+            @extend .itemCard__div__botones;
+            color: rgba(255, 0, 0, 0.596);
+            pointer-events: none;
+        }
+        &--min{
+            @extend .itemCard__div__botones;
+            color: rgba(255, 0, 0, 0.596);
+            pointer-events: none;
+        }
+
         &__btn {
             border: none;
-        margin-top: 5px;
-        padding: 7px;
-        border-radius: 5px;
-        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
-        background-color: #9d13ff2f;
-        font-size: 16px;
-        font-weight: 500;
+            margin-top: 5px;
+            padding: 7px;
+            border-radius: 5px;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+            background-color: #9d13ff2f;
+            font-size: 16px;
+            font-weight: 500;
 
-        &:hover {
-            transform: scale(1.1, 1.1);
-            border: 0.5px rgb(202, 202, 202) solid;
+            &:hover {
+                transform: scale(1.1, 1.1);
+                border: 0.5px rgb(202, 202, 202) solid;
+            }
         }
     }
-    }
 }
-
-;
