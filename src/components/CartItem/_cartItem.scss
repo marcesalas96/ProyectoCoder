@@ -29,6 +29,11 @@
         &__precio {
             width: 15%;
             text-align: center;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            gap: 1rem;
+            align-items: center;
         }
 
         &__cantidad {
@@ -54,6 +59,10 @@
                     @extend .cart__div__productos__cantidad__btn;
                     color: rgba(255, 0, 0, 0.596);
                     pointer-events: none;
+                }
+                &--thrash{
+                    @extend .cart__div__productos__cantidad__btn;
+                    color: rgba(255, 0, 0, 0.596);
                 }
             }
         }

@@ -1,10 +1,11 @@
 import './_ItemListContainer.scss'
-import { pedirDatos } from '../../mock/pedirDatos'
 import { useEffect, useState } from 'react'
 import { Loader } from '../Loader/Loader'
 import { ItemList } from '../ItemList/ItemList'
 import {Hero} from '../Hero/Hero'
 import { useParams } from 'react-router-dom'
+import { collection, getDocs, query, where } from 'firebase/firestore'
+import { db } from '../../firebase/config'
 
 
 export const ItemListContainer = () =>{
@@ -14,13 +15,15 @@ export const ItemListContainer = () =>{
     useEffect(() => {
         setLoading(true)
 
-        pedirDatos()
+        const productosRef = collection(db, "productos")
+        const q = categoria ? query(productosRef, where("categoria","==",categoria)) : productosRef
+        getDocs(q)
             .then((resp) => {
-                if(!categoria){ 
-                setItems( resp )}
-                else{
-                setItems( resp.filter((item) => item.categoria===categoria))
-                }
+                setItems(resp.docs.map((doc) => 
+                ({
+                    id: doc.id,
+                    ...doc.data()
+                })))
             })
             .catch((error) => {
                 console.log('ERROR', error)

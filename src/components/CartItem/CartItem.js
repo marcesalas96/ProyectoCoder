@@ -1,9 +1,9 @@
 import './_cartItem.scss'
-import { BsCartPlus, BsCartDash } from 'react-icons/bs'
+import { BsCartPlus, BsCartDash, BsTrash } from 'react-icons/bs'
 import { useCartContext } from '../../context/CartContext'
 
 export const CartItem = ({ item }) => {
-    const { addQty, removeQty } = useCartContext()
+    const { addQty, removeQty, removeItem } = useCartContext()
     return (
         <div className='cart__div__productos__container' key={item.id}>
             <div className='cart__div__productos__imgYtitulo'>
@@ -17,6 +17,8 @@ export const CartItem = ({ item }) => {
             </div>
             <div className='cart__div__productos__precio'>
                 <span>${item.precio * item.cantidad}</span>
+                <button className="cart__div__productos__cantidad__btn--thrash"><BsTrash className='cart__div__productos__cantidad__logo' onClick={() => removeItem(item.id)}/></button>
+
             </div>
         </div>
     )

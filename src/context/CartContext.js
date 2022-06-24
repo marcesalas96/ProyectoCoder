@@ -32,7 +32,7 @@ export const CartProvider = ({ children }) => {
         const index = cart.findIndex((item) => item.id === Number(id))
         const item = cart[index]
         if (item.cantidad === 1) {
-            setCart(cart.filter(product => (product.id !== id)))
+            removeItem(id)
         }
         else {
             const newQty = item.cantidad - 1
@@ -52,10 +52,14 @@ export const CartProvider = ({ children }) => {
             setCart(copyCart)
         }
     }
+    
+    const removeItem = (id) => {
+        setCart(cart.filter(product => (product.id !== id)))
+        }
 
     return (
         <CartContext.Provider value={{
-            cart, addItem, isInCart, totalPriceCalculator, totalQuantity, deleteCart, removeQty, addQty
+            cart, addItem, isInCart, totalPriceCalculator, totalQuantity, deleteCart, removeQty, addQty, removeItem
         }
         }>
 

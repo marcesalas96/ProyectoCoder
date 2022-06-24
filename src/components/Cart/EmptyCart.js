@@ -13,7 +13,9 @@ export const EmptyCart = () =>{
                     <button className='emptyCart__btn'>REALIZAR COMPRA</button>
                 </Link>
             </div>
-
+            {
+                
+            }
         </section>
     )
 }
