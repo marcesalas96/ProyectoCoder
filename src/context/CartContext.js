@@ -29,7 +29,7 @@ export const CartProvider = ({ children }) => {
         setCart([])
     }
     const removeQty = (id) => {
-        const index = cart.findIndex((item) => item.id === Number(id))
+        const index = cart.findIndex((item) => item.id === id)
         const item = cart[index]
         if (item.cantidad === 1) {
             removeItem(id)
@@ -43,7 +43,7 @@ export const CartProvider = ({ children }) => {
     }
 
     const addQty = (id) => {
-        const index = cart.findIndex((item) => item.id === Number(id))
+        const index = cart.findIndex((item) => item.id === id)
         const item = cart[index]
         if(item.cantidad<item.stock){
             const newQty = item.cantidad + 1

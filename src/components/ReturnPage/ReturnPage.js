@@ -5,14 +5,14 @@ export const ReturnPage = () => {
 
     const navigate = useNavigate()
     const returnPage = () => {
-        navigate(-1)
+        navigate('/')
     }
 
     return (
         <>
             <div className='divReturn' onClick={returnPage}>
                 <MdOutlineArrowBackIos className='divReturn__logo' />
-                <span className='divReturn__span'>Volver</span>
+                <span className='divReturn__span'>Volver al inicio</span>
             </div>
 
         </>
