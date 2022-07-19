@@ -10,6 +10,9 @@
     justify-content: flex-end;
     gap: 2rem;
     align-items: center;
+    @media screen and (max-width: 500px) {
+        justify-content: space-between;
+    }
     }
     &__logoCarrito{
         width: 70px;
@@ -51,10 +54,33 @@
         align-items: center;
         padding: 10px;
         gap: 5px;
-        cursor: pointer;
         &__logo{
             width: 25px;
             height: 25px;
+        }
+        &__span{
+            padding: 0;
+            margin: 0;
+            color: rgb(109, 0, 0);
+            cursor: pointer;
+        }
+        &__container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+        }
+        h5{
+            padding: 0;
+            margin: 0;
+            @media screen and (max-width: 500px) {
+                font-size: 1rem;
+            }
+        }
+        &__link{
+             text-decoration: none;
+             color: black;
+             font-weight: 450;
         }
     }
 

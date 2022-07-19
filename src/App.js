@@ -7,24 +7,35 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Cart } from './components/Cart/Cart';
 import { CartProvider } from './context/CartContext';
 import { Checkout } from './components/Checkout/Checkout'
+import { RegisterScreen } from './components/RegisterScreen/RegisterScreen'
+import { LoginScreen } from './components/LoginScreen/LoginScreen'
+import { AuthProvider } from './context/AuthContext';
+import { Footer } from './components/Footer/Footer';
+
+
 
 
 
 
 function App() {
   return (
-    <CartProvider>
-      <BrowserRouter>
-        <NavBar />
-        <Routes>
-          <Route path='/' element={<ItemListContainer />} />
-          <Route path='/categoria/:categoria' element={<ItemListContainer />} />
-          <Route path='/productos/:itemId' element={<ItemDetailContainer />} />
-          <Route path='/cart' element={<Cart/>} />
-          <Route path='/checkout' element={<Checkout/>} />
-        </Routes>
-      </BrowserRouter>
-    </CartProvider>
+    <AuthProvider>
+      <CartProvider>
+        <BrowserRouter>
+          <NavBar />
+          <Routes>
+            <Route path='/' element={<ItemListContainer />} />
+            <Route path='/categoria/:categoria' element={<ItemListContainer />} />
+            <Route path='/productos/:itemId' element={<ItemDetailContainer />} />
+            <Route path='/cart' element={<Cart />} />
+            <Route path='/registro' element={<RegisterScreen />} />
+            <Route path='/login' element={<LoginScreen />} />
+            <Route path='/checkout' element={<Checkout />} />
+          </Routes>
+          <Footer />
+        </BrowserRouter>
+      </CartProvider>
+    </AuthProvider>
   );
 }
 

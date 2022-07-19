@@ -7,6 +7,9 @@
 
         &__texto {
             margin-top: 5px;
+            @media screen and (max-width: 520px) {   
+                font-size: 1rem;
+            }
         }
 
         &__botones {
@@ -21,8 +24,11 @@
             border-radius: 5px;
             box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
             background-color: #9d13ff2f;
-            font-size: 16px;
+            font-size: 1rem;
             font-weight: 500;
+            @media screen and (max-width: 520px) {   
+                font-size: 0.8rem;
+            }
 
             &:hover {
                 transform: scale(1.1, 1.1);
@@ -30,7 +36,10 @@
             }
 
             &__logo {
-                font-size: 22px
+                font-size: 1.5rem;
+                @media screen and (max-width: 520px) {   
+                    display: none;
+                }
             }
 
             &-vaciar {

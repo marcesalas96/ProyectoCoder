@@ -1,4 +1,6 @@
 import { createContext, useState, useContext } from "react";
+import { useToast, Box } from '@chakra-ui/react'
+
 
 export const CartContext = createContext();
 
@@ -8,11 +10,20 @@ export const useCartContext = () => {
 
 export const CartProvider = ({ children }) => {
     const [cart, setCart] = useState([]);
-
+    const toast = useToast()
+    
     const addItem = (item) => {
         const copyCart = cart.slice();
         copyCart.push(item)
         setCart(copyCart)
+        toast({
+            position: 'bottom-right',
+            render: () => (
+              <Box color='black' p={3} bg='#9C13FF'>
+                Producto agregado al carrito con exito!
+              </Box>
+            ),
+          })
     }
 
     const isInCart = (id) => {

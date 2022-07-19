@@ -1,4 +1,4 @@
-.item__container{
+.item__container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
@@ -7,4 +7,16 @@
     align-items: center;
     row-gap: 2rem;
     background-color: #f8e6f8;
+
+    @media screen and (max-width: 1250px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @media screen and (max-width: 690px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media screen and (max-width: 500px) {
+        padding: 1rem 5px;
+        grid-template-columns: 1fr;
+        row-gap: 7px;
+    }
 }

@@ -12,7 +12,7 @@ export const ReturnPage = () => {
         <>
             <div className='divReturn' onClick={returnPage}>
                 <MdOutlineArrowBackIos className='divReturn__logo' />
-                <span className='divReturn__span'>Volver al inicio</span>
+                <span className='divReturn__span'>Volver al inicio!</span>
             </div>
 
         </>

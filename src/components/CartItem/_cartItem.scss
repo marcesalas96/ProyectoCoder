@@ -8,8 +8,10 @@
             flex-direction: row;
             align-items: center;
             border-bottom: 0.5px rgb(202, 202, 202) solid;
-            ;
             padding-bottom: 1rem;
+            width: 100%;
+            justify-content: space-between;
+            margin-top: 1rem;
         }
 
         &__imgYtitulo {
@@ -17,50 +19,99 @@
             gap: 1rem;
             align-items: center;
             flex-direction: row;
-            width: 60%;
+            width: 1068px*0.6;
+            @media screen and (max-width: 1100px) {
+                width: 60%;
+            }
+            @media screen and (max-width: 510px) {   
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                gap: 2px;
+            }
         }
 
         &__img {
             width: 152px;
             height: 152px;
             object-fit: contain;
+
+            @media screen and (max-width: 720px) {
+                width: 90px;
+                height: 90px;
+                object-fit: cover;
+
+            }
+
+
+        }
+
+        &__titulo {
+            @media screen and (max-width: 720px) {
+                font-size: 1rem;
+                text-align: center;
+
+            }
         }
 
         &__precio {
-            width: 15%;
+            width: 1068px*0.15;
             text-align: center;
             display: flex;
             flex-direction: row;
-            justify-content: space-around;
-            gap: 1rem;
+            justify-content: space-evenly;
             align-items: center;
+            @media screen and (max-width: 1100px) {
+                justify-content: space-around;
+                width: 15%;
+            }
+            @media screen and (max-width: 510px) {   
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 7px;
+            }
+
         }
 
         &__cantidad {
-            width: 25%;
+            width: 1068px*0.25;
             display: flex;
             flex-direction: row;
             justify-content: center;
             align-content: center;
             gap: 3rem;
+            @media screen and (max-width: 1100px) {
+                justify-content: space-around;
+                gap: 0;
+                width: 25%;
+            }
+            @media screen and (max-width: 510px) {   
+                flex-direction: column-reverse;
+                justify-content: center;
+                align-items: center;
+                gap: 2px;
+            }
 
             &__logo {
                 font-size: 25px;
-                
+
                 &:hover {
                     transform: scale(1.15, 1.15);
                 }
             }
-            
+
             &__btn {
                 background: none;
                 border: none;
-                &--max{
+
+                &--max {
                     @extend .cart__div__productos__cantidad__btn;
                     color: rgba(255, 0, 0, 0.596);
                     pointer-events: none;
                 }
-                &--thrash{
+
+                &--thrash {
                     @extend .cart__div__productos__cantidad__btn;
                     color: rgba(255, 0, 0, 0.596);
                 }

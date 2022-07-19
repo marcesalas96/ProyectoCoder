@@ -8,7 +8,7 @@ export const CartFooter = () => {
 
     return (
         <>
-            <h4 className='cart__div__footer__text'>Total: ${totalPriceCalculator()}</h4>
+            <h4 className='cart__div__footer__texto'>Total: ${totalPriceCalculator()}</h4>
             <div className='cart__div__footer__botones'>
                 <Link to='/checkout' className='cart__div__footer__link'>
                     <button className='cart__div__footer__btn'>IR A PAGAR</button>
