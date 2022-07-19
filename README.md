@@ -1,5 +1,7 @@
 # Getting Started with Create React App
 
+Este proyecto fue inspirado en mi mascota, Milo.
+Use todo lo aprendido en el curso, y por mi cuenta implenete un sistema de registro / login de usuario conectado a la base de datos de Firebase.
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
